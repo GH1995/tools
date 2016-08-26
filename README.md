@@ -1,6 +1,5 @@
-# tools
-MY TOOLS
+# My tools
 
-CONTENT
+**CONTENT**
 
-1. Ubuntu shell
+1. [Ubuntu shell](https://github.com/GH1995/tools/blob/master/1_install.sh)
