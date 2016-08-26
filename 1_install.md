@@ -1,3 +1,4 @@
+```shell
 #!/bin/bash
 # Author: GH1995
 
@@ -109,3 +110,4 @@ sudo apt upgrade > /dev/null
 echo "EVERYTHING IS OK!"
 
 exit
+```
