@@ -104,7 +104,7 @@ sudo apt install fish
 source ~/.bashrc
 
 # upgrade
-sudo apt upgrade > /dev/null
+sudo apt upgrade -y
 
 echo "EVERYTHING IS OK!"
 
