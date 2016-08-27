@@ -1,0 +1,6 @@
+create procedure choose_grade(@low int,@high int)
+as
+select Sname,Sdept,Grade
+from Student,Score
+where Student.Sno=Score.Sno and
+(Grade between @low and @high)

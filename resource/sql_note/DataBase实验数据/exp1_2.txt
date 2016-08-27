@@ -1,0 +1,4 @@
+select Sdept, COUNT(Sno)
+from Student
+group by Sdept
+order by COUNT(Sno) desc

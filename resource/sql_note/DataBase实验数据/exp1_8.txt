@@ -1,0 +1,6 @@
+select Student.Sno, Sname, Ssex, Sage
+from Student,Teacher,Score
+where Teacher.Tname='ÀîÕý¿Æ'
+	  and Student.Sno=Score.Sno
+	  and Teacher.Cno=Score.Cno
+	  group by Student.Sno,Sname,Ssex,Sdept,Sage

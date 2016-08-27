@@ -1,0 +1,2 @@
+select Sno, Sname, 2015-Sage 出生年份
+from Student
