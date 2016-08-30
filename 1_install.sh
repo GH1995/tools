@@ -3,8 +3,9 @@
 
 ## USTC resource
 sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-sudo apt update
+sudo apt update -y
 sudo apt install curl -y
+sleep 5
 echo "install USTC resource success!"
 
 # git
@@ -32,7 +33,7 @@ echo "install Emacs success!"
 # 安装Vundle
 # Vundle is short for Vim bundle and is a Vim plugin manager.
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo "install Vundle success, but reminder!"
+echo "install Vundle success!"
 
 # 安装编译器
 sudo apt install g++ -y
@@ -88,12 +89,12 @@ echo "install MySQL success!"
 
 # fish
 # The user-friendly command line shell. http://fishshell.com
-sudo apt install fish
+# sudo apt install fish
 
 # 中文文档[已过时]
 # sudo apt install manpages-zh -y
 
-# vim的配置
+# Vim的配置
 # sh <(curl https://j.mp/spf13-vim3 -L)
 
 # spacemacs的配置
