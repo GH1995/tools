@@ -4,6 +4,7 @@ filetype plugin on
 set expandtab
 set number
 set relativenumber
+set clipboard+=unnamed
 
 " let @a="i**ea**"
 " map #1 @a

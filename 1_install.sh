@@ -5,7 +5,7 @@
 sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 sudo apt update -y
 sudo apt install curl -y
-sleep 5
+echo 
 echo "install USTC resource success!"
 
 # git
@@ -18,6 +18,7 @@ sudo apt install bash -y
 sudo apt install wget -y
 sudo apt install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+echo 
 echo "install oh-my-zsh success!"
 
 
@@ -25,31 +26,43 @@ echo "install oh-my-zsh success!"
 sudo apt install vim ctags -y
 sudo apt install vim-gnome -y
 touch ~/.vimrc
+echo
 echo "install Vim success!"
 
 sudo apt install emacs -y
+echo
 echo "install Emacs success!"
 
 # 安装Vundle
 # Vundle is short for Vim bundle and is a Vim plugin manager.
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo
 echo "install Vundle success!"
 
 # 安装编译器
 sudo apt install g++ -y
 sudo apt install clang -y
 sudo apt install openjdk-8-jdk -y
+echo
 echo "install g++, clang, openjdk-8-jdk success!"
 
 # 安装下载工具
 sudo apt install aria2 -y
 sudo apt install axel -y
+echo
 echo "install aria2 and axel success!"
+
+# 种子下载
+sudo apt install aria2c
+# aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10 
+echo
+echo "install aria2c success!"
 
 # 安装其他工具
 sudo apt install tree -y
 sudo apt install lynx -y
 sudo apt install htop -y
+echo
 echo "install tree, lynx and htop success!"
 
 
@@ -57,6 +70,7 @@ echo "install tree, lynx and htop success!"
 sudo apt install screen -y
 # alt加方向键在相邻终端格之间转移
 # -dmS 创建会话 C+A+D离开 -r 恢复 -l 列表
+echo
 echo "install screen success!"
 
 
@@ -68,6 +82,7 @@ sudo apt install openssh-server openssh-client -y
 # 重启服务：sudo /etc/init.d/sshresart
 # 断开连接：exit
 # 登录：ssh [-l login_name] [-p port] [user@]hostname
+echo
 echo "install openssh-server and openssh-server success!"
 
 
@@ -81,6 +96,7 @@ sudo apt install mysql-server mysql-client
 # 相关配置文件存放目录：/usr/share/mysql
 # 相关命令存放目录： /usr/bin(mysqladmin mysqldump等命令)
 # 启动脚步存放目录： /etc/rc.d/init.d/
+echo
 echo "install MySQL success!"
 
 
@@ -107,6 +123,7 @@ source ~/.bashrc
 # upgrade
 sudo apt upgrade -y
 
+echo
 echo "EVERYTHING IS OK!"
 
 exit
