@@ -6,11 +6,11 @@ sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 sudo apt update -y
 sudo apt install curl -y
 echo 
-echo "install USTC resource success!"
+echo "install USTC resource success!" >> install_log.txt;
 
 # git
 sudo apt install git -y
-echo "install git success!"
+echo "install git success!" >> install_log.txt;
 
 
 # zsh
@@ -19,7 +19,7 @@ sudo apt install wget -y
 sudo apt install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 echo 
-echo "install oh-my-zsh success!"
+echo "install oh-my-zsh success!" >> install_log.txt;
 
 
 # 安装Vim和Emacs
@@ -27,43 +27,43 @@ sudo apt install vim ctags -y
 sudo apt install vim-gnome -y
 touch ~/.vimrc
 echo
-echo "install Vim success!"
+echo "install Vim success!" >> install_log.txt;
 
 sudo apt install emacs -y
 echo
-echo "install Emacs success!"
+echo "install Emacs success!" >> install_log.txt;
 
 # 安装Vundle
 # Vundle is short for Vim bundle and is a Vim plugin manager.
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo
-echo "install Vundle success!"
+echo "install Vundle success!" >> install_log.txt;
 
 # 安装编译器
 sudo apt install g++ -y
 sudo apt install clang -y
 sudo apt install openjdk-8-jdk -y
 echo
-echo "install g++, clang, openjdk-8-jdk success!"
+echo "install g++, clang, openjdk-8-jdk success!" >> install_log.txt;
 
 # 安装下载工具
 sudo apt install aria2 -y
 sudo apt install axel -y
 echo
-echo "install aria2 and axel success!"
+echo "install aria2 and axel success!" >> install_log.txt;
 
 # 种子下载
 sudo apt install aria2c
 # aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10 
 echo
-echo "install aria2c success!"
+echo "install aria2c success!" >> install_log.txt;
 
 # 安装其他工具
 sudo apt install tree -y
 sudo apt install lynx -y
 sudo apt install htop -y
 echo
-echo "install tree, lynx and htop success!"
+echo "install tree, lynx and htop success!" >> install_log.txt;
 
 
 # 安装 screen
@@ -71,7 +71,7 @@ sudo apt install screen -y
 # alt加方向键在相邻终端格之间转移
 # -dmS 创建会话 C+A+D离开 -r 恢复 -l 列表
 echo
-echo "install screen success!"
+echo "install screen success!" >> install_log.txt;
 
 
 
@@ -83,7 +83,7 @@ sudo apt install openssh-server openssh-client -y
 # 断开连接：exit
 # 登录：ssh [-l login_name] [-p port] [user@]hostname
 echo
-echo "install openssh-server and openssh-server success!"
+echo "install openssh-server and openssh-server success!" >> install_log.txt;
 
 
 # 安装MySQL
@@ -97,7 +97,7 @@ sudo apt install mysql-server mysql-client
 # 相关命令存放目录： /usr/bin(mysqladmin mysqldump等命令)
 # 启动脚步存放目录： /etc/rc.d/init.d/
 echo
-echo "install MySQL success!"
+echo "install MySQL success!" >> install_log.txt;
 
 
 # --------------------------------------------------------------------------
@@ -124,6 +124,6 @@ source ~/.bashrc
 sudo apt upgrade -y
 
 echo
-echo "EVERYTHING IS OK!"
+echo "EVERYTHING IS OK!" >> install_log.txt;
 
 exit
