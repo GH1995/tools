@@ -8,6 +8,14 @@ sudo apt install curl -y
 echo 
 echo "install USTC resource success!" >> install_log.txt;
 
+# essential 
+sudo apt-get install build-essential cmake
+echo "install essential success!" >> install_log.txt;
+
+# python
+sudo apt-get install python-dev python3-dev
+echo "install python success!" >> install_log.txt;
+
 # git
 sudo apt install git -y
 echo "install git success!" >> install_log.txt;
