@@ -1,4 +1,4 @@
-a-  [OE] = on, in
+a- [OE] = on, in
 a- [GK] = not, with
 ab-(abs-) [L] = away from, off
 ad- (ac-, af-, etc.) [L] = to, at
