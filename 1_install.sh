@@ -1,10 +1,10 @@
 #!/bin/bash
 # Author: GH1995
 
+# 安装部分软件
+# --------------------------------------------------------------------------
 ## USTC resource
-sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-sudo apt update -y
-sudo apt install curl -y
+sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && sudo apt update -y && sudo apt install curl -y
 if [ $? -eq 0]
 then
     echo "install USTC resource success!" >> install_log.txt;
@@ -12,17 +12,19 @@ else
     echo "install USTC resource failed!" >> install_log.txt;
 fi
 
-# essential 
+# essential
 sudo apt-get install build-essential cmake
 if [ $? -eq 0]
 then
     echo "install essential success!" >> install_log.txt;
 else
-    echo "install essential success!" >> install_log.txt;
+    echo "install essential failed!" >> install_log.txt;
 fi
 
 # python
-sudo apt-get install python-dev python3-dev
+sudo apt-get install python-dev python3-dev python-pip
+(mkdir ~/.pip && touch ~/.pip/pip.conf)
+echo '[global]' >> ~/.pip/pip.conf && echo 'index-url=http://pypi.douban.com/simple' >> ~/.pip/pip.conf
 if [ $? -eq 0]
 then
     echo "install python success!" >> install_log.txt;
@@ -41,10 +43,7 @@ fi
 
 
 # zsh
-sudo apt install bash -y
-sudo apt install wget -y
-sudo apt install zsh -y
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" &
+sudo apt install bash wget wget -y && sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" &
 if [ $? -eq 0]
 then
     echo "install oh-my-zsh success!" >> install_log.txt;
@@ -54,9 +53,7 @@ fi
 
 
 # 安装Vim和Emacs
-sudo apt install vim ctags -y
-sudo apt install vim-gnome -y
-touch ~/.vimrc
+sudo apt install vim-gnome ctags -y && touch ~/.vimrc
 if [ $? -eq 0]
 then
     echo "install Vim success!" >> install_log.txt;
@@ -83,9 +80,7 @@ else
 fi
 
 # 安装编译器
-sudo apt install g++ -y
-sudo apt install clang -y
-sudo apt install openjdk-8-jdk -y
+sudo apt install clang g++ openjdk-8-jdk -y
 if [ $? -eq 0]
 then
     echo "install g++, clang, openjdk-8-jdk success!" >> install_log.txt;
@@ -94,8 +89,7 @@ else
 fi
 
 # 安装下载工具
-sudo apt install aria2 -y
-sudo apt install axel -y
+sudo apt install axel aria2 -y
 if [ $? -eq 0]
 then
     echo "install aria2 and axel success!" >> install_log.txt;
@@ -103,16 +97,13 @@ else
     echo "install aria2 and axel failed!" >> install_log.txt;
 fi
 
-# 种子下载
+# 安装种子下载工具
 sudo apt install aria2c
-# aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10 
-echo
+# aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10
 echo "install aria2c success!" >> install_log.txt;
 
 # 安装其他工具
-sudo apt install tree -y
-sudo apt install lynx -y
-sudo apt install htop -y
+sudo apt install htop tree lynx -y
 if [ $? -eq 0]
 then
     echo "install tree, lynx and htop success!" >> install_log.txt;
@@ -167,31 +158,33 @@ else
 fi
 
 
-# --------------------------------------------------------------------------
-# 可选的一些工具和配置
+# ------------------------------------------------------------+
+# 可选的一些工具和配置                                        |
+#                                                             |
+# fish                                                        |
+# The user-friendly command line shell. http://fishshell.com  |
+# sudo apt install fish                                       |
+#                                                             |
+# 中文文档[已过时]                                            |
+# sudo apt install manpages-zh -y                             |
+#                                                             |
+# Vim的配置                                                   |
+# sh <(curl https://j.mp/spf13-vim3 -L)                       |
+#                                                             |
+# spacemacs的配置                                             |
+# git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d  |
+#                                                             |
+# ------------------------------------------------------------+
 
-# fish
-# The user-friendly command line shell. http://fishshell.com
-# sudo apt install fish
-
-# 中文文档[已过时]
-# sudo apt install manpages-zh -y
-
-# Vim的配置
-# sh <(curl https://j.mp/spf13-vim3 -L)
-
-# spacemacs的配置
-# git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-
-# --------------------------------------------------------------------------
-
-source ~/.bashrc
 
 # upgrade
-sudo apt upgrade -y
+source ~/.bashrc && sudo apt upgrade -y
 if [ $? -eq 0]
 then
     echo "EVERYTHING IS OK!" >> install_log.txt;
 fi
+
+# --------------------------------------------------------------------------
+
 
 exit
