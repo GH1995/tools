@@ -25,6 +25,7 @@ fi
 sudo apt-get install python-dev python3-dev python-pip
 (mkdir ~/.pip && touch ~/.pip/pip.conf)
 echo '[global]' >> ~/.pip/pip.conf && echo 'index-url=http://pypi.douban.com/simple' >> ~/.pip/pip.conf
+echo '[install]' >> ~/.pip/pip.conf && echo 'trusted-host = pypi.douban.com' >> ~/.pip/pip.conf
 if [ $? -eq 0]
 then
     echo "install python success!" >> install_log.txt;
@@ -52,7 +53,7 @@ else
 fi
 
 
-# 安装Vim和Emacs
+# 安装 Vim 和 Emacs
 sudo apt install vim-gnome ctags -y && touch ~/.vimrc
 if [ $? -eq 0]
 then
@@ -98,9 +99,9 @@ else
 fi
 
 # 安装种子下载工具
-sudo apt install aria2c
+# sudo apt install aria2c
 # aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10
-echo "install aria2c success!" >> install_log.txt;
+# echo "install aria2c success!" >> install_log.txt;
 
 # 安装其他工具
 sudo apt install htop tree lynx -y
