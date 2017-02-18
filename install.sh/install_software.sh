@@ -1,8 +1,5 @@
-#!/bin/bash
-# Author: GH1995
+# °²×°²¿·ÖÈí¼ş
 
-# å®‰è£…éƒ¨åˆ†è½¯ä»¶
-# --------------------------------------------------------------------------
 ## USTC resource
 sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && sudo apt update -y && sudo apt install curl -y
 if [ $? -eq 0]
@@ -52,8 +49,7 @@ else
     echo "install oh-my-zsh failed!" >> install_log.txt;
 fi
 
-
-# å®‰è£… Vim å’Œ Emacs
+# °²×° Vim ºÍ Emacs
 sudo apt install vim-gnome ctags -y && touch ~/.vimrc
 if [ $? -eq 0]
 then
@@ -70,7 +66,7 @@ else
     echo "install Emacs failed!" >> install_log.txt;
 fi
 
-# å®‰è£…Vundle
+# °²×°Vundle
 # Vundle is short for Vim bundle and is a Vim plugin manager.
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 if [ $? -eq 0]
@@ -80,7 +76,7 @@ else
     echo "install Vundle failed!" >> install_log.txt;
 fi
 
-# å®‰è£…ç¼–è¯‘å™¨
+# °²×°±àÒëÆ÷
 sudo apt install clang g++ openjdk-8-jdk -y
 if [ $? -eq 0]
 then
@@ -89,7 +85,7 @@ else
     echo "install g++, clang, openjdk-8-jdk failed!" >> install_log.txt;
 fi
 
-# å®‰è£…ä¸‹è½½å·¥å…·
+# °²×°ÏÂÔØ¹¤¾ß
 sudo apt install axel aria2 -y
 if [ $? -eq 0]
 then
@@ -98,12 +94,12 @@ else
     echo "install aria2 and axel failed!" >> install_log.txt;
 fi
 
-# å®‰è£…ç§å­ä¸‹è½½å·¥å…·
+# °²×°ÖÖ×ÓÏÂÔØ¹¤¾ß
 # sudo apt install aria2c
-# aria2c -s[çº¿ç¨‹æ•°] 10 -x[æœ€å¤§ä½¿ç”¨å‡ ä¸ªçº¿ç¨‹ä¸‹è½½] 10 -j[åŒæ—¶ä¸‹è½½å¤šå°‘æ–‡ä»¶] 10
+# aria2c -s[Ïß³ÌÊı] 10 -x[×î´óÊ¹ÓÃ¼¸¸öÏß³ÌÏÂÔØ] 10 -j[Í¬Ê±ÏÂÔØ¶àÉÙÎÄ¼ş] 10
 # echo "install aria2c success!" >> install_log.txt;
 
-# å®‰è£…å…¶ä»–å·¥å…·
+# °²×°ÆäËû¹¤¾ß
 sudo apt install htop tree lynx -y
 if [ $? -eq 0]
 then
@@ -113,10 +109,10 @@ else
 fi
 
 
-# å®‰è£… screen
+# °²×° screen
 sudo apt install screen -y
-# altåŠ æ–¹å‘é”®åœ¨ç›¸é‚»ç»ˆç«¯æ ¼ä¹‹é—´è½¬ç§»
-# -dmS åˆ›å»ºä¼šè¯ C+A+Dç¦»å¼€ -r æ¢å¤ -l åˆ—è¡¨
+# alt¼Ó·½Ïò¼üÔÚÏàÁÚÖÕ¶Ë¸ñÖ®¼ä×ªÒÆ
+# -dmS ´´½¨»á»° C+A+DÀë¿ª -r »Ö¸´ -l ÁĞ±í
 if [ $? -eq 0]
 then
     echo "install screen success!" >> install_log.txt;
@@ -126,13 +122,13 @@ fi
 
 
 
-# å®‰è£…openssh-server openssh-client
+# °²×°openssh-server openssh-client
 sudo apt install openssh-server openssh-client -y
-# åœæ­¢æœåŠ¡ï¼šsudo /etc/init.d/ssh stop
-# å¯åŠ¨æœåŠ¡ï¼šsudo /etc/init.d/ssh start
-# é‡å¯æœåŠ¡ï¼šsudo /etc/init.d/sshresart
-# æ–­å¼€è¿æ¥ï¼šexit
-# ç™»å½•ï¼šssh [-l login_name] [-p port] [user@]hostname
+# Í£Ö¹·şÎñ£ºsudo /etc/init.d/ssh stop
+# Æô¶¯·şÎñ£ºsudo /etc/init.d/ssh start
+# ÖØÆô·şÎñ£ºsudo /etc/init.d/sshresart
+# ¶Ï¿ªÁ¬½Ó£ºexit
+# µÇÂ¼£ºssh [-l login_name] [-p port] [user@]hostname
 if [ $? -eq 0]
 then
     echo "install openssh-server and openssh-server success!" >> install_log.txt;
@@ -141,51 +137,19 @@ else
 fi
 
 
-# å®‰è£…MySQL
+# °²×°MySQL
 sudo apt install mysql-server mysql-client
-# mysql -uroot -p 		ç™»å½•
-# sudo start mysql 		å¯åŠ¨MySQLæœåŠ¡
-# sudo stop mysql 		åœæ­¢MySQLæœåŠ¡
-# sudo mysqladmin -u root password newpassword ä¿®æ”¹ MySQL çš„ç®¡ç†å‘˜å¯†ç 
-# æ•°æ®åº“å­˜æ”¾ç›®å½•ï¼š		/var/lib/mysql/
-# ç›¸å…³é…ç½®æ–‡ä»¶å­˜æ”¾ç›®å½•ï¼š/usr/share/mysql
-# ç›¸å…³å‘½ä»¤å­˜æ”¾ç›®å½•ï¼š /usr/bin(mysqladmin mysqldumpç­‰å‘½ä»¤)
-# å¯åŠ¨è„šæ­¥å­˜æ”¾ç›®å½•ï¼š /etc/rc.d/init.d/
+# mysql -uroot -p 		µÇÂ¼
+# sudo start mysql 		Æô¶¯MySQL·şÎñ
+# sudo stop mysql 		Í£Ö¹MySQL·şÎñ
+# sudo mysqladmin -u root password newpassword ĞŞ¸Ä MySQL µÄ¹ÜÀíÔ±ÃÜÂë
+# Êı¾İ¿â´æ·ÅÄ¿Â¼£º		/var/lib/mysql/
+# Ïà¹ØÅäÖÃÎÄ¼ş´æ·ÅÄ¿Â¼£º/usr/share/mysql
+# Ïà¹ØÃüÁî´æ·ÅÄ¿Â¼£º /usr/bin(mysqladmin mysqldumpµÈÃüÁî)
+# Æô¶¯½Å²½´æ·ÅÄ¿Â¼£º /etc/rc.d/init.d/
 if [ $? -eq 0]
 then
     echo "install MySQL success!" >> install_log.txt;
 else
     echo "install MySQL failed!" >> install_log.txt;
 fi
-
-
-# ------------------------------------------------------------+
-# å¯é€‰çš„ä¸€äº›å·¥å…·å’Œé…ç½®                                        |
-#                                                             |
-# fish                                                        |
-# The user-friendly command line shell. http://fishshell.com  |
-# sudo apt install fish                                       |
-#                                                             |
-# ä¸­æ–‡æ–‡æ¡£[å·²è¿‡æ—¶]                                            |
-# sudo apt install manpages-zh -y                             |
-#                                                             |
-# Vimçš„é…ç½®                                                   |
-# sh <(curl https://j.mp/spf13-vim3 -L)                       |
-#                                                             |
-# spacemacsçš„é…ç½®                                             |
-# git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d  |
-#                                                             |
-# ------------------------------------------------------------+
-
-
-# upgrade
-source ~/.bashrc && sudo apt upgrade -y
-if [ $? -eq 0]
-then
-    echo "EVERYTHING IS OK!" >> install_log.txt;
-fi
-
-# --------------------------------------------------------------------------
-
-
-exit
