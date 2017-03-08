@@ -9,8 +9,10 @@ sudo apt-get install build-essential cmake
 # python
 sudo apt-get install python-dev python3-dev python-pip
 (mkdir ~/.pip && touch ~/.pip/pip.conf)
-echo '[global]' >> ~/.pip/pip.conf && echo 'index-url=http://pypi.douban.com/simple' >> ~/.pip/pip.conf
-echo '[install]' >> ~/.pip/pip.conf && echo 'trusted-host = pypi.douban.com' >> ~/.pip/pip.conf
+echo '[global]' >> ~/.pip/pip.conf
+echo 'index-url=http://pypi.douban.com/simple' >> ~/.pip/pip.conf
+echo '[install]' >> ~/.pip/pip.conf
+echo 'trusted-host = pypi.douban.com' >> ~/.pip/pip.conf
 
 # git
 sudo apt install git -y
