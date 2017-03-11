@@ -1,4 +1,4 @@
-﻿// UVa1584(LA3225) Circular Sequence
+﻿// UVa1584(LA3225/\r/\r/g Circular Sequence
 // Rujia Liu
 #include<stdio.h>
 #include<string.h>

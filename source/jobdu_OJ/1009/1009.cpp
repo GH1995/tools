@@ -18,7 +18,7 @@ YES
 NO
 来源：
 2010年浙江大学计算机及软件工程研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <cstring>
 using namespace std;

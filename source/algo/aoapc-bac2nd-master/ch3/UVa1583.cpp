@@ -1,4 +1,4 @@
-// UVa1583(LA3355) Digit Generator
+// UVa1583(LA3355/\r/\r/g Digit Generator
 // Rujia Liu
 #include<stdio.h>
 #include<string.h>

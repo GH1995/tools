@@ -14,7 +14,7 @@
 8
 984
 1
-*/
+*/\r/\r/g
 #include<iostream>
 using namespace std;
 

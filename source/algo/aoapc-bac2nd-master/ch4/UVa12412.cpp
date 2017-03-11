@@ -1,4 +1,4 @@
-// UVa12412 A Typical Homework (a.k.a Shi Xiong Bang Bang Mang)
+// UVa12412 A Typical Homework (a.k.a Shi Xiong Bang Bang Mang/\r/\r/g
 // Rujia Liu
 #include<stdio.h>
 #include<string.h>

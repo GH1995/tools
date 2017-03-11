@@ -1,4 +1,4 @@
-/* 实验一  词法分析 */
+/* 实验一  词法分析 */\r/\r/g
 
 /* #include <stdio.h> */
 #include <stdlib.h>

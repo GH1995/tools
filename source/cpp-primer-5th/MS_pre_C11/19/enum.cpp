@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/\r/\r/g 
 
 // This file was revised to eliminate forward declarations
 // and scoped enums, both of which are C++ 11 features

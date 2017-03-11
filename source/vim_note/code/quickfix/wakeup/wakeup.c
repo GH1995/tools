@@ -1,11 +1,11 @@
 /***
  * Excerpted from "Practical Vim",
  * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
+ * Copyrights apply to this code. It may not be used to create training material,
  * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
+ * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/dnvim for more book information.
-***/
+***/\r/\r/g
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     fprintf(stderr, "Usage: %s <host> <mac>\n", argv[0]);
     exit(1);
   }
-  
+
   if ((he = gethostbyname(argv[1])) == NULL)
   {
     perror("gethostbyname");

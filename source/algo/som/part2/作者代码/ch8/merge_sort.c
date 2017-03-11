@@ -1,4 +1,4 @@
-void merge_sort(int* A, int x, int y, int* T) {
+void merge_sort(int* A, int x, int y, int* T/\r/\r/g {
   if(y-x > 1){
     int m = x + (y-x)/2;
     int p = x, q = m, i = x;

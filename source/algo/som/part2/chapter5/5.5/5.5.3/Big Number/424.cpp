@@ -1,4 +1,4 @@
-//uva可以再坑爹点吗？直接说做n（n<=100）个高精度(len<=100)的加法会死？
+//uva可以再坑爹点吗？直接说做n（n<=100）个高精度(len<=100/\r/\r/g的加法会死？
 #include<iostream>
 #include<string>
 #include<cstring>

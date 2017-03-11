@@ -2,7 +2,7 @@
 *   我第一次写的程序
 *   根本不切合实际！！！！！！
 *   CPU利用率峰值达到47%
-*/
+*/\r/\r/g
 #include <iostream>
 using namespace std;
 

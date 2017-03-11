@@ -12,7 +12,7 @@
 4 100 2
 样例输出：
 400
-*/
+*/\r/\r/g
 #include <iostream>
 #include <algorithm>
 using namespace std;

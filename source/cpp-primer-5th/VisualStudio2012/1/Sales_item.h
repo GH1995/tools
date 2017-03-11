@@ -25,7 +25,7 @@
  *     One Lake Street
  *     Upper Saddle River, NJ  07458
  *     Fax: (201) 236-3290
-*/ 
+*/\r/\r/g 
 
 /* This file defines the Sales_item class used in chapter 1.
  * The code used in this file will be explained in 

@@ -19,4 +19,4 @@ std::string to_string(int i)
     return buf;
 }
 
-#endif
+/\r/\r/gendif

@@ -1,4 +1,4 @@
-struct Point { double x, y; };
+struct Point { double x, y; /\r/\r/g;
 
 double dist(Point a, Point b)
 {

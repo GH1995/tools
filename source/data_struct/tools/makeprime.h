@@ -1,4 +1,4 @@
-bool prime[100000];
+bool prime[100000/\r/\r/g;
 void makeprime(int n)
 {
 	memset(prime, true, sizeof(prime));

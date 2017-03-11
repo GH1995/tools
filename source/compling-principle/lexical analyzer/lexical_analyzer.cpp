@@ -43,7 +43,7 @@ mainµ÷ÓÃpretreatment½øĞĞÔ¤´¦Àí£¬È»ºó²»¶Ïµ÷ÓÃÉ¨Ãèº¯Êıscanner£¬»ñµÃµ¥´ÊµÄ¶şÔªÊ½Âë£
 	x			100
 	x			101
 
-*/
+*/\r/\r/g
 #include <iostream>
 #include <cstring>
 #include <cstdlib>

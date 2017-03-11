@@ -13,7 +13,7 @@
 ?            ?$
 来源：
 2010年北京大学计算机研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <stack>
 using namespace std;

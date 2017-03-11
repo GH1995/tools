@@ -1,4 +1,4 @@
-int prime_factor(int n)
+int prime_factor(int n/\r/\r/g
 {
 	int count = 0;
 	for (int i = 2; i * i <= n; i++)

@@ -1,4 +1,4 @@
-//Input a series of nodes with char c(data) and int p(frequency), build a huffman tree,
+//Input a series of nodes with char c(data/\r/\r/g and int p(frequency), build a huffman tree,
 // and output the huffman code of each node.
 #include<cstdio>
 #include<cstdlib>

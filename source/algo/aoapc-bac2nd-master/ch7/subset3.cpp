@@ -1,4 +1,4 @@
-﻿// {0~n-1}的所有子集：二进制法
+﻿// {0~n-1/\r/\r/g的所有子集：二进制法
 // Rujia Liu
 #include<cstdio>
 using namespace std;

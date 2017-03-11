@@ -1,4 +1,4 @@
-// UVa12169 Disgruntled Judge (slow solution)
+// UVa12169 Disgruntled Judge (slow solution/\r/\r/g
 // Rujia Liu
 //
 // rev2. fixed bug reported by EndlessCheng

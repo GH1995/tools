@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/\r/\r/g 
 
 /* This file uses list initialization, which is a feature that the
  * MS compiler may not yet support.  This file (and other source files)

@@ -14,7 +14,7 @@ while (1)
 		break;
 	printf("%d\n", a + b);
 }
-*/
+*/\r/\r/g
 
 #include <stdio.h>
 int main()

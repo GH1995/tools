@@ -25,4 +25,4 @@ double stod(const std::string &s, std::size_t * = 0)
     char **buf = 0;
     return std::strtod(s.c_str(), buf);
 }
-#endif
+/\r/\r/gendif

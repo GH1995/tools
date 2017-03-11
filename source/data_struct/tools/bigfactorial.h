@@ -1,4 +1,4 @@
-void prenext(int a[], int k)
+void prenext(int a[], int k/\r/\r/g
 {
 	int d = 0;
 	int i;

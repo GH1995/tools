@@ -1,6 +1,6 @@
 /*
 *   求n个整数的最大公约数
-*/
+*/\r/\r/g
 
 #include <stdio.h>
 int main()

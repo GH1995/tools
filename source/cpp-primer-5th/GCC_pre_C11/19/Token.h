@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+*/\r/\r/g 
 
 // This file illustrates use of unions with a class type member
 // that has constructors and copy control members

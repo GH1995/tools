@@ -19,7 +19,7 @@ if(l + 1 == r) 只有一个字符，建立单字符结点{
     rc[cnt] = build(op1+1, r);
     return cnt;
   }
-*/
+*/\r/\r/g
 #include<cstdio>
 #include<cstring>
 #include<cctype>

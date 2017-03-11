@@ -1,7 +1,7 @@
 /*
    Try These Test Cases:
    27 441,  4 109,  59 211,  101 103,  907 911,  523 547
-*/
+*/\r/\r/g
 #include<cstdlib>
 #include<cstdio>
 #include<cmath>

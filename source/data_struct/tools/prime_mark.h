@@ -1,4 +1,4 @@
-int prime_mark(int n, int prime[])
+int prime_mark(int n, int prime[]/\r/\r/g
 {
 	bool mark[100000];
 	memset(mark, true, sizeof(mark));

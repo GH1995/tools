@@ -1,4 +1,4 @@
-char *bigmul(char *sa, char *sb, char *sc)
+char *bigmul(char *sa, char *sb, char *sc/\r/\r/g
 {
 	int a[200] = { 0 };
 	int b[200] = { 0 };

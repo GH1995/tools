@@ -1,4 +1,4 @@
-///S=(b^L-1)/(b-1) b太大或L太大，结点数都会是一个天文数字？
+///S=(b^L-1/\r/\r/g/(b-1) b太大或L太大，结点数都会是一个天文数字？
 #include<cstdio>
 #include<cstdlib>
 int main(){

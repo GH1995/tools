@@ -1,6 +1,6 @@
 /*
 *   存在问题
-*/
+*/\r/\r/g
 #define N 160
 #include <iostream>
 #include <string>

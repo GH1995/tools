@@ -1,4 +1,4 @@
-﻿// UVa512 Spreadsheet Tracking (算法1)
+﻿// UVa512 Spreadsheet Tracking (算法1/\r/\r/g
 // Rujia Liu
 #include<stdio.h>
 #include<string.h>

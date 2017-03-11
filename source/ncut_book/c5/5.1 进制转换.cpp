@@ -1,6 +1,6 @@
 /*
 *   将P（P>=2）进制数转换成R(R<=16)进制数
-*/
+*/\r/\r/g
 
 #include <iostream>
 #include <string>

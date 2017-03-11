@@ -1,4 +1,4 @@
-char *strrev(char *str);
+char *strrev(char *str/\r/\r/g;
 
 char *strrev(char *str)
 {

@@ -9,7 +9,7 @@
 样例输出：
 1234567900
 来源：
-*/
+*/\r/\r/g
 #include <iostream>
 #include <string.h>
 using namespace std;

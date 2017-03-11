@@ -14,7 +14,7 @@
 6
 来源：
 2007年北京大学计算机研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <algorithm>
 using namespace std;

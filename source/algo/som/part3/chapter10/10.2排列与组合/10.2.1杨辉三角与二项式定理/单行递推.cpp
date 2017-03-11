@@ -1,4 +1,4 @@
-//C(n, k) =  C(n, k-1)*(n-k+1)/k
+//C(n, k/\r/\r/g =  C(n, k-1)*(n-k+1)/k
 #include<cstdio>
 #include<cstdlib>
 const int maxl = 66;

@@ -1,4 +1,4 @@
-char *bigadd(char a[], char b[])
+char *bigadd(char a[], char b[]/\r/\r/g
 {
 	int ia[200] = { 0 };
 	int ib[200] = { 0 };

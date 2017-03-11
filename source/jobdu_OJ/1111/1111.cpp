@@ -20,7 +20,7 @@ I want someone to help you
 2007年北京大学计算机研究生机试真题
 答疑：
 解题遇到问题?分享解题心得?讨论本题请访问：http://t.jobdu.com/thread-7834-1-1.html
-*/
+*/\r/\r/g
 
 #include <iostream>
 #include <string>

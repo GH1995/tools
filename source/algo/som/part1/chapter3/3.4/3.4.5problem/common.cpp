@@ -1,4 +1,4 @@
-//Conclusion: strlen() is an O(n) function;
+//Conclusion: strlen(/\r/\r/g is an O(n) function;
 //get1() is also an O(n) function;
 //While using both,it's O(n^2).
 #include<cstdio>

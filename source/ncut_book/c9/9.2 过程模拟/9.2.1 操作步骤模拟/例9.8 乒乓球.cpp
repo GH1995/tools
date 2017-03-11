@@ -2,7 +2,7 @@
 *	判断依据比赛结束的条件是：双方有一方达到11分或21分，且双方分数之差大于1，或者是比赛结束。
 *	正在进行比赛的比分需要输出，并且0：0也要输出。
 *
-*/
+*/\r/\r/g
 #include <iostream>
 #include <cmath>
 using namespace std;

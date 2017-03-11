@@ -6,7 +6,7 @@
 *	循环条件： c != 0
 *	构造量：m = 1
 *
-*/
+*/\r/\r/g
 
 #include <iostream>
 using namespace std;

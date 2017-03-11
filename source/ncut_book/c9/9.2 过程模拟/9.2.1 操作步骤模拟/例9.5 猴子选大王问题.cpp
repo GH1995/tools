@@ -1,6 +1,6 @@
 /*
 *	n只猴子，编号1~n，从1号开始报数，一直报到m的猴子退出圈外，接下来的猴子再从1开始报数
-*/
+*/\r/\r/g
 
 #include <iostream>
 using namespace std;

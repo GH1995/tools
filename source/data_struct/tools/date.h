@@ -1,6 +1,6 @@
 /*
 	只实现了前置++
-*/
+*/\r/\r/g
 
 class date {
 public:

@@ -13,7 +13,7 @@
 YES
 来源：
 2010年北京邮电大学计算机研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 using namespace std;
 

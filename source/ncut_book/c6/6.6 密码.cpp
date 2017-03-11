@@ -1,6 +1,6 @@
 /*
 *	存在问题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <string>
 #include <cctype>

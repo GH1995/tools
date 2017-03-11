@@ -15,7 +15,7 @@
 可以用字符串表示不同进制的整数。
 来源：
 2008年北京大学图形实验室计算机研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <string>
 #include <algorithm>

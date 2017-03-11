@@ -1,4 +1,4 @@
-semaphore chopstick[5] = {1, 1, 1, 1, 1};
+semaphore chopstick[5/\r/\r/g = {1, 1, 1, 1, 1};
 semaphore mutex = 1;
 
 void philosopher(int i)

@@ -1,4 +1,4 @@
-char *itoa(int val, char *buf, unsigned radix)
+char *itoa(int val, char *buf, unsigned radix/\r/\r/g
 {
 	char   *p;
 	char   *firstdig;

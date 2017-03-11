@@ -1,0 +1,31 @@
+" 背景颜色
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+else
+
+endif
+
+set guifont=Consolas:h11:cANSI
+" set guifont=Monaco:h11:cANSI
+" set guifont=Monaco:h11:cDEFAULT
+
+
+"不显示工具/菜单栏
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+
+
+if has('win32')
+	au GUIEnter * simalt ~x
+else
+	au GUIEnter * call MaximizeWindow()
+endif
+
+" 最大化窗口
+function! MaximizeWindow()
+	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction

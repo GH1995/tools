@@ -10,7 +10,7 @@
 *   x = x1*b/d(, y = y1*b/d)            *
 * else                                  *
 *   NO ANSWER                           *
-\***************************************/
+\***************************************/\r/\r/g
 #include <cstdio>
 #include <cstdlib> 
 void gcd(int a, int b, int& d, int& x, int &y){

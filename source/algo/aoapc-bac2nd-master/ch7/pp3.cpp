@@ -1,4 +1,4 @@
-﻿// 可重集的全排列(next_permutation版)
+﻿// 可重集的全排列(next_permutation版/\r/\r/g
 // Rujia Liu
 #include<cstdio>
 #include<algorithm>

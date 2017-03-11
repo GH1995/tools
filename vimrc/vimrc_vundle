@@ -1,0 +1,94 @@
+set nocompatible              " 去除VI一致性,必须
+filetype off                  " 必须
+
+" 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim
+call vundle#begin()
+" 另一种选择, 指定一个vundle安装插件的路径
+"call vundle#begin('~/some/path/here')
+
+" 让vundle管理插件版本,必须
+Plugin 'VundleVim/Vundle.vim'
+
+" Solarized 配色
+Plugin 'altercation/vim-colors-solarized'
+
+" Airline: 小巧美观的状态栏
+Plugin 'bling/vim-airline'
+
+" Tabular: 自动对齐
+" Plugin 'godlygeek/tabular'
+
+" CtrlP
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'tpope/vim-surround' " help file: ~/.vim/vimrc/help/surround.help
+
+" 解决<C-W>O的问题
+Plugin 'vim-scripts/ZoomWin'
+
+" 百度翻译
+Plugin 'drwx/baidu_trans.vim'
+
+" snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+" Optional
+Plugin 'honza/vim-snippets'
+
+" LaTeX-suite
+Plugin 'gerw/vim-latex-suite'
+
+" 语法检查
+Plugin 'w0rp/ale'
+
+" 代码格式化
+Plugin 'google/yapf'
+
+" 整理 import
+" Plugin 'timothycrosley/isort'
+
+" 删除多余的空格
+Plugin 'bronson/vim-trailing-whitespace'
+
+" 括号补全
+Plugin 'Raimondi/delimitMate'
+
+" 远程编辑
+" Plugin 'vim-scripts/netrw.vim'
+
+" 对齐
+Plugin 'junegunn/vim-easy-align'
+
+" 自动触发补全
+" Plugin 'vim-scripts/L9'
+" Plugin 'othree/vim-autocomplpop'
+" Plugin 'vimcn/acp.vim.cnx'
+
+" 高亮
+Plugin 'mbriggs/mark.vim'
+
+" Plugin 'vimwiki/vimwiki'
+" Plugin 'vim-scripts/OmniCppComplete'
+
+" 你的所有插件需要在下面这行之前
+call vundle#end()            " 必须
+filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+
+" 忽视插件改变缩进,可以使用以下替代:
+" filetype plugin on
+
+" 简要帮助文档
+" :PluginList       - 列出所有已配置的插件
+" :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
+" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+
+" 查阅 :h vundle 获取更多细节和wiki以及FAQ
+" 将你自己对非插件片段放在这行之后

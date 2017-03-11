@@ -1,4 +1,4 @@
-// UVa12563 Jin Ge Jin Qu [h]ao
+// UVa12563 Jin Ge Jin Qu [h/\r/\r/gao
 // Rujia Liu
 #include<cstdio>
 #include<cstring>

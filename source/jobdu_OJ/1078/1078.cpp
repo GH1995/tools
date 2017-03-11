@@ -17,7 +17,7 @@ BCA
 XEDGAF
 来源：
 2006年清华大学计算机研究生机试真题
-*/
+*/\r/\r/g
 #include <iostream>
 #include <cstring>
 using namespace std;

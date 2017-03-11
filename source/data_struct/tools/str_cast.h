@@ -1,4 +1,4 @@
-int str_cast(char *s, char *d)
+int str_cast(char *s, char *d/\r/\r/g
 {
 	int sign;
 

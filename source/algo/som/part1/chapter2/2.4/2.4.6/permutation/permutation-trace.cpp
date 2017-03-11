@@ -6,7 +6,7 @@
 否则
   处理；
 拆除标记（回溯）；
-*/
+*/\r/\r/g
 #include<iostream>
 #include<cstdio>
 #include<cstring>

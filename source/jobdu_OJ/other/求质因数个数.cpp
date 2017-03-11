@@ -12,7 +12,7 @@
 5
 提示：
 注意：1不是N的质因数；若N为质数，N是N的质因数。
-*/
+*/\r/\r/g
 
 #include <iostream>
 using namespace std;

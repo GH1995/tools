@@ -17,7 +17,7 @@
 The minimum amount of money in the piggy-bank is 60.
 The minimum amount of money in the piggy-bank is 100.
 This is impossible.
-*/
+*/\r/\r/g
 #define INF 99999
 #include <iostream>
 #include <algorithm>
