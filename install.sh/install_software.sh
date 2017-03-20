@@ -34,11 +34,6 @@ sudo apt install clang g++ openjdk-8-jdk -y
 # 安装下载工具
 sudo apt install axel aria2 -y
 
-# 安装种子下载工具
-# sudo apt install aria2c
-# aria2c -s[线程数] 10 -x[最大使用几个线程下载] 10 -j[同时下载多少文件] 10
-# echo "install aria2c success!" >> install_log.txt;
-
 # 安装其他工具
 sudo apt install htop tree lynx -y
 
