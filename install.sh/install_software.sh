@@ -33,6 +33,7 @@ sudo apt install clang g++ openjdk-8-jdk -y
 
 # 安装下载工具
 sudo apt install axel aria2 -y
+# axel -n 10
 
 # 安装种子下载工具
 # sudo apt install aria2c
