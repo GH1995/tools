@@ -1,7 +1,0 @@
-create table S1(Sno varchar(50),
-		           Sname varchar(50),
-				   SD varchar(50),
-				   SA varchar(50))
-	    insert into S1
-		select Sno,Sname,Sdept,Sage
-		from Student		

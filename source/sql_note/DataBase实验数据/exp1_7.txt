@@ -1,4 +1,0 @@
-select distinct Tname
-from Course, Teacher
-where Course.Cno = Teacher.Cno
-	  and Course.Cname='数据结构'

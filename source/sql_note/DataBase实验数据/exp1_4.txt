@@ -1,5 +1,0 @@
-select Tname
-from Teacher, Score
-where Teacher.Cno = Score.Cno
-group by Teacher.Tname
-having COUNT(Score.Cno)>3

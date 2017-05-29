@@ -1,8 +1,0 @@
-select Distinct Sname, Cno, Grade
-from Student, Score x
-where Student.Sno = x.Sno
-	  and Grade in(
-	  select MAX(Grade)
-	  from Score
-	  where Score.Sno = x.Sno
-	  group by Sno)

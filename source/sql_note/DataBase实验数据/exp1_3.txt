@@ -1,5 +1,0 @@
-select Student.Sno, Course.Cname, Score.Grade
-from Student, Course, Score
-where Score.Cno = '002' or Score.Cno = '003'
-	  and Score.Sno = Student.Sno
-	  and Score.Cno = Course.Cno
