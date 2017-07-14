@@ -1,8 +1,5 @@
 // 第4章 树和二叉树
 
-
-
-
 // // 二叉树
 
 /*
@@ -21,42 +18,23 @@
 *			 n - 1 = n1 + 2* n2;
 */
 
-
-
-
-
-
-
 // 二叉树的顺序存储结构
 
-#define MAX_TREE_SIZE 100                   // 二叉树的最大结点数
+#define MAX_TREE_SIZE 100 // 二叉树的最大结点数
 
-typedef TElemType SqBiTree[MAX_TREE_SIZE]   // 0号单元存放根结点
+typedef TElemType SqBiTree[MAX_TREE_SIZE] // 0号单元存放根结点
 
-/*
-*   不常用
-*/
+    /*
+    *   不常用
+    */
 
+    // 二叉链表形式
 
+    typedef struct BiTNode {
+  TElemType data; //数据
 
-
-
-
-
-
-
-
-
-
-
-// 二叉链表形式
-
-typedef struct BiTNode
-{
-	TElemType data;         //数据
-
-	struct BiTNode *lchild; // 左孩子指针
-	struct BiTNode *rchild; // 右孩子指针
+  struct BiTNode *lchild; // 左孩子指针
+  struct BiTNode *rchild; // 右孩子指针
 
 } BiTNode, *BiTree;
 
@@ -64,130 +42,39 @@ typedef struct BiTNode
 *   一般情况下就使用这种存储结构
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // 遍历二叉树（必背的七个算法）
 
-
-
-
-
-
-
 // （1）前序遍历的递归实现
-void PreOrder(BiTree b)
-{
-	if (b != NULL)
-	{
-		Visit(b->data);
-		// 访问结点的数据域
+void PreOrder(BiTree b) {
+  if (b != NULL) {
+    Visit(b->data);
+    // 访问结点的数据域
 
-		PreOrder(b->lchild);    // 先序递归遍历b的左子树
-		PreOrder(b->rchild);    // 先序递归遍历b的右子树
-	}
+    PreOrder(b->lchild); // 先序递归遍历b的左子树
+    PreOrder(b->rchild); // 先序递归遍历b的右子树
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （2）中序遍历的递归实现
-void InOrder(BiTree b)
-{
-	if (b != NULL)
-	{
-		InOrder(b->lchild);
+void InOrder(BiTree b) {
+  if (b != NULL) {
+    InOrder(b->lchild);
 
-		Visit(b->data);
+    Visit(b->data);
 
-		InOrder(b->rchild);
-	}
+    InOrder(b->rchild);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （3）后序遍历的递归实现
-void PostOrder(BiTree b)
-{
-	if (b != NULL)
-	{
-		PostOrder(b->lchild);
-		PostOrder(b->rchild);
+void PostOrder(BiTree b) {
+  if (b != NULL) {
+    PostOrder(b->lchild);
+    PostOrder(b->rchild);
 
-		Visit(b->data);
-	}
+    Visit(b->data);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （4）层序遍历的实现
 
@@ -196,75 +83,47 @@ void PostOrder(BiTree b)
 *   变量front和rear分别表示当前队首元素和队尾元素在数组中的位置。
 */
 
+void LevelOrder(BiTree b) {
+  /*
+  *   先定义了 存储树系结点队列，队首队尾元素的“指针”
+  */
+  BiTree Queue[MAX_TREE_SIZE];
 
+  int front;
+  int rear;
 
-void LevelOrder(BiTree b)
-{
-	/*
-	*   先定义了 存储树系结点队列，队首队尾元素的“指针”
-	*/
-	BiTree Queue[MAX_TREE_SIZE];
+  /*
+  *   如果树为空，掉头就走
+  */
+  if (b == NULL)
+    return;
 
-	int front;
-	int rear;
+  /*
+  *   初始化，队列的初始化是使我想到数轴，0是一个预留的位置哈
+  *   预备存储rear，b根结点
+  */
+  front = -1;
+  rear = 0;
+  Queue[rear] = b;
 
+  /*
+  *   一个烧煤的炉子
+  */
 
+  while (front ！ = rear) // 队列没有穷尽
+  {
+    Visit(Queue[++front]->data);
+    // 访问队头结点数据域
 
+    if (Queue[front]->lchild != NULL)
+      Queue[++rear] = Queue[front]->lchild;
+    // 将队头结点的左孩子结点入队
 
-	/*
-	*   如果树为空，掉头就走
-	*/
-	if (b == NULL)
-		return;
-
-
-	/*
-	*   初始化，队列的初始化是使我想到数轴，0是一个预留的位置哈
-	*   预备存储rear，b根结点
-	*/
-	front = -1;
-	rear = 0;
-	Queue[rear] = b;
-
-
-
-	/*
-	*   一个烧煤的炉子
-	*/
-
-
-
-	while (front ！ = rear)      // 队列没有穷尽
-	{
-		Visit(Queue[++front]->data);
-		// 访问队头结点数据域
-
-		if (Queue[front]->lchild != NULL)
-			Queue[++rear] = Queue[front]->lchild;
-		// 将队头结点的左孩子结点入队
-
-		if (Queue[front]->rchild != NULL)
-			Queue[++rear] = Queue[front]->rchild;
-		// 将队头结点的右孩子结点入队
-	}
+    if (Queue[front]->rchild != NULL)
+      Queue[++rear] = Queue[front]->rchild;
+    // 将队头结点的右孩子结点入队
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （5）前序遍历的非递归实现
 
@@ -276,56 +135,37 @@ void LevelOrder(BiTree b)
 *   这里使用栈而不是队列！
 */
 
+void PreOrder1(BiTree b) {
+  BiTree St[MAX_TREE_SIZE];
+  BiTree p;
+  int top = -1;
 
-void PreOrder1(BiTree b)
-{
-	BiTree St[MAX_TREE_SIZE];
-	BiTree p;
-	int top = -1;
+  /*
+  *   再次让我想起了那个数轴，不过这个数轴只到-1，没有更小的了。
+  */
 
+  if (b != NULL) {
+    St[++top] = b; // 根结点进栈
 
+    while (top > -1) // 栈不空时循环
+    {
+      p = St[top--]; // 出栈
+      Visit(p->data);
 
-	/*
-	*   再次让我想起了那个数轴，不过这个数轴只到-1，没有更小的了。
-	*/
+      /*
+      *   出栈并访问该结点
+      */
 
+      if (p->rchild != NULL)
+        St[++top] = p->rchild;
+      // 右孩子结点进栈
 
-
-	if (b != NULL)
-	{
-		St[++top] = b;          // 根结点进栈
-
-		while (top > -1)        // 栈不空时循环
-		{
-			p = St[top--];      // 出栈
-			Visit(p->data);
-
-			/*
-			*   出栈并访问该结点
-			*/
-
-			if (p->rchild != NULL)
-				St[++top] = p->rchild;
-			// 右孩子结点进栈
-
-			if (p->lchild != NULL)
-				St[++top] = p->lchild;
-			// 左孩子结点进栈
-		}
-	}
+      if (p->lchild != NULL)
+        St[++top] = p->lchild;
+      // 左孩子结点进栈
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （6）中序遍历的非递归实现
 
@@ -340,49 +180,33 @@ void PreOrder1(BiTree b)
 *
 */
 
-void InOrder1(BiTree b)
-{
-	BiTree St[MAX_TREE_SIZE];
-	BiTree p;
+void InOrder1(BiTree b) {
+  BiTree St[MAX_TREE_SIZE];
+  BiTree p;
 
-	int top = -1;
+  int top = -1;
 
-	if (b != NULL)
-	{
-		p = b;
+  if (b != NULL) {
+    p = b;
 
-		while (p != NULL || top > -1)
-		{
-			while (p != NULL)       // 扫描*p的左孩子并进栈
-			{
-				St[++top] = p;
-				p = p->lchild;
-			}
-			if (top > -1)
-			{
-				p = St[top--];
-				// 出栈*p结点并访问
+    while (p != NULL || top > -1) {
+      while (p != NULL) // 扫描*p的左孩子并进栈
+      {
+        St[++top] = p;
+        p = p->lchild;
+      }
+      if (top > -1) {
+        p = St[top--];
+        // 出栈*p结点并访问
 
-				Visit(b->data);
+        Visit(b->data);
 
-				p = p->rchild;
-				// 扫描*p的右孩子结点
-			}
-		}
-	}
+        p = p->rchild;
+        // 扫描*p的右孩子结点
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // （7）后序遍历的非递归实现
 
@@ -403,121 +227,67 @@ void InOrder1(BiTree b)
 *
 */
 
+void PostOrder1(BiTree b) {
+  BiTree St[MAX_TREE_SIZE];
+  BiTree b;
+  int flag, top = -1;
 
+  if (b != NULL) {
+    do {
+      while (b != NULL) // 扫描*b的左结点并进栈
+      {
+        St[++top] = b;
+        b = b->lchild;
+      }
 
+      p = NULL; // p指向栈顶结点的前一个已访问的结点
+      flag = 1; // 设置b的已访问标记为已访问过
 
+      while (top != -1 && flag) {
+        b = St[top]; // 取出当前的栈顶元素
 
+        /*
+        *   右孩子不存在或右孩子已被访问，则访问*b
+        */
 
-void PostOrder1(BiTree b)
-{
-	BiTree St[MAX_TREE_SIZE];
-	BiTree b;
-	int flag, top = -1;
-
-	if (b != NULL)
-	{
-		do
-		{
-			while (b != NULL)               // 扫描*b的左结点并进栈
-			{
-				St[++top] = b;
-				b = b->lchild;
-			}
-
-			p = NULL;                       // p指向栈顶结点的前一个已访问的结点
-			flag = 1;                       // 设置b的已访问标记为已访问过
-
-			while (top != -1 && flag)
-			{
-				b = St[top];                // 取出当前的栈顶元素
-
-				/*
-				*   右孩子不存在或右孩子已被访问，则访问*b
-				*/
-
-				if (b->rchild == p)
-				{
-					Visit(b->data);         // 访问*b结点
-					top--;
-					p = b;                  // p指向被访问的结点
-				}
-				else
-				{
-					b = b->rchild;          // b指向右孩子结点
-					flag = 0;               // 设置未被访问的标记
-				}
-			}
-		} while (top != -1);
-	}
+        if (b->rchild == p) {
+          Visit(b->data); // 访问*b结点
+          top--;
+          p = b; // p指向被访问的结点
+        } else {
+          b = b->rchild; // b指向右孩子结点
+          flag = 0;      // 设置未被访问的标记
+        }
+      }
+    } while (top != -1);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 *   建立二叉链表方式存储的二叉树
 *   以加入结点的前序序列输入，构造二叉链表
 */
-void CreateBiTree(BiTree &b)
-{
-	char ch;
+void CreateBiTree(BiTree &b) {
+  char ch;
 
-	scanf("%c", &ch);
+  scanf("%c", &ch);
 
-	if (ch == '#')
-		b = NULL;       // 读入0时，将相应结点置空
-	else
-	{
-		/*
-		*   生产结点空间，填入数据
-		*/
-		// b = (BiTNode *)malloc(sizeof(BiTNode));
-		b = new BiTNode;
-		b->data = ch;
-		b->lchild = NULL;
-		b->rchild = NULL;
+  if (ch == '#')
+    b = NULL; // 读入0时，将相应结点置空
+  else {
+    /*
+    *   生产结点空间，填入数据
+    */
+    // b = (BiTNode *)malloc(sizeof(BiTNode));
+    b = new BiTNode;
+    b->data = ch;
+    b->lchild = NULL;
+    b->rchild = NULL;
 
-		CreateBiTree(b->lchild);    // 构造左子树
-		CreateBiTree(b->rchild);    // 构造右子树
-	}
+    CreateBiTree(b->lchild); // 构造左子树
+    CreateBiTree(b->rchild); // 构造右子树
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 线索二叉树
 /*
@@ -537,38 +307,19 @@ void CreateBiTree(BiTree &b)
 查找后继仍需要栈）。
 */
 
-
-
-
-
-
-
-
 //线索二叉树存储表示
-enum PointerTag
-{
-	Link,
-	Thread
-};
+enum PointerTag { Link, Thread };
 
+typedef struct BiThrNode {
+  TElemType data;
 
+  struct BiThrNode *lchild;
+  struct BiThrNode *rchild;
 
-
-typedef struct BiThrNode
-{
-	TElemType data;
-
-	struct BiThrNode *lchild;
-	struct BiThrNode *rchild;
-
-	PointerTag LTag;
-	PointerTag RTag;
+  PointerTag LTag;
+  PointerTag RTag;
 
 } BiThrNode, *BiThrTree;
-
-
-
-
 
 // 建立一棵中序线索二叉树
 /*
@@ -583,176 +334,108 @@ typedef struct BiThrNode
 /*
 *   中序遍历二叉树T，将其中序线索化，head指向头结点
 */
-int InOrderThr(BiThrTree &head, BiThrTree T)
-{
-	if (!(head = (BiThrNode *)malloc(sizeof(BiThrNode))))
-		return 0;
+int InOrderThr(BiThrTree &head, BiThrTree T) {
+  if (!(head = (BiThrNode *)malloc(sizeof(BiThrNode))))
+    return 0;
 
-	// 建立头结点
-	head->LTag = 0;
-	head->RTag = 1;
+  // 建立头结点
+  head->LTag = 0;
+  head->RTag = 1;
 
-	head->rchild = head;    // 右指针回指
+  head->rchild = head; // 右指针回指
 
-	if (!T)
-		head->lchild = head;    // 若二叉树为空，则左指针回指
-	else
-	{
-		head->lchild = T;
-		pre = head;
+  if (!T)
+    head->lchild = head; // 若二叉树为空，则左指针回指
+  else {
+    head->lchild = T;
+    pre = head;
 
-		InThreading(T);     // 中序遍历进行中序线索化
+    InThreading(T); // 中序遍历进行中序线索化
 
-		pre->rchild = head;
-		pre->RTag = 1;
+    pre->rchild = head;
+    pre->RTag = 1;
 
-		// 最后一个结点线索化
-		head->rchild = pre;
-	}
+    // 最后一个结点线索化
+    head->rchild = pre;
+  }
 
-	return 1;
+  return 1;
 }
 
+void InThreading(BiThrTree p) {
+  if (p) {
+    // 左子树线索化
+    InThreading(p->lchild);
 
+    /*
+    *   前驱线索
+    */
+    if (!p->lchild) {
+      p->LTag = 1;
+      p->lchild = pre;
+    }
 
+    /*
+    *   后继线索
+    */
+    if (!pre->rchild) {
+      pre->RTag = 1;
+      pre->rchild = p;
+    }
 
-
-
-
-
-void InThreading(BiThrTree p)
-{
-	if (p)
-	{
-		// 左子树线索化
-		InThreading(p->lchild);
-
-		/*
-		*   前驱线索
-		*/
-		if (!p->lchild)
-		{
-			p->LTag = 1;
-			p->lchild = pre;
-		}
-
-		/*
-		*   后继线索
-		*/
-		if (!pre->rchild)
-		{
-			pre->RTag = 1;
-			pre->rchild = p;
-		}
-
-		// 右子树线索化
-		pre = p;
-		InThreading(p->rchild);
-	}
+    // 右子树线索化
+    pre = p;
+    InThreading(p->rchild);
+  }
 }
-
-
-
-
-
-
-
-
-
-
 
 // 二叉排序树
 
-
-
-
-
 // 递归算法
-BiTree SearchBST(BiTree b, KeyType key)
-{
-	if (!b)
-		return NULL;
-	else if (key == b->key)    // 查找成功
-		return b;
-	else if (key < b->key)
-		return SearchBST(b->lchild, key);   // 左子树中继续查找
-	else
-		return SearchBST(b->rchild, key);   // 右子树中继续查找
+BiTree SearchBST(BiTree b, KeyType key) {
+  if (!b)
+    return NULL;
+  else if (key == b->key) // 查找成功
+    return b;
+  else if (key < b->key)
+    return SearchBST(b->lchild, key); // 左子树中继续查找
+  else
+    return SearchBST(b->rchild, key); // 右子树中继续查找
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 非递归算法
-BiTree SearchBST(BiTree b, KeyType key)
-{
-	BiTree q = b;
+BiTree SearchBST(BiTree b, KeyType key) {
+  BiTree q = b;
 
-	while (q)
-	{
-		if (q->key == k)        // 查找成功
-			return q;
-		if (key < q->data.key)
-			q = q->lchild;      // 左子树中查找
-		else
-			q = q->rchild;      // 右子树中查找
-	}
+  while (q) {
+    if (q->key == k) // 查找成功
+      return q;
+    if (key < q->data.key)
+      q = q->lchild; // 左子树中查找
+    else
+      q = q->rchild; // 右子树中查找
+  }
 
-	return NULL;                // 查找失败
+  return NULL; // 查找失败
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 二叉排序树插入
-void InsertBST(BiTree &b, KeyType key)
-{
-	BiTree s;
+void InsertBST(BiTree &b, KeyType key) {
+  BiTree s;
 
-	if (b == NULL)          // 递归结束条件
-	{
-		s = (BiTNode *)malloc(sizeof(BiTNode));
-		s->key = key;
-		s->lchild = NULL;
-		s->rchild = NULL;
-		b = s;
-	}
-	else if (key < b->key)
-		InsertBST(b->lchild, key);      // 将s插入左子树
-	else if (key > b->key)
-		InsertBST(b->rchild, key);      // 将s插入右子树
+  if (b == NULL) // 递归结束条件
+  {
+    s = (BiTNode *)malloc(sizeof(BiTNode));
+    s->key = key;
+    s->lchild = NULL;
+    s->rchild = NULL;
+    b = s;
+  } else if (key < b->key)
+    InsertBST(b->lchild, key); // 将s插入左子树
+  else if (key > b->key)
+    InsertBST(b->rchild, key); // 将s插入右子树
 }
-
-
-
-
-
-
-
 
 // 平衡二叉树
 
 // 哈夫曼树
-

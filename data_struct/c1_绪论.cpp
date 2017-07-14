@@ -1,13 +1,13 @@
 // 第1章 绪论
 
 for (int i = 0; i <= n; ++i)
-    for(int j = 1; j <= i; j++)
-        S;
+  for (int j = 1; j <= i; j++)
+    S;
 
 for (int i = 1; i <= n; ++i)
-    for(int j = 1; j <= i; j++)
-        for(int k = 1; k <= j; k++)
-            S;
+  for (int j = 1; j <= i; j++)
+    for (int k = 1; k <= j; k++)
+      S;
 
 /*
 数据结构是指相互之间存在着一种或多种关系的数据元素的集合。
@@ -41,30 +41,31 @@ R是D上关系的有限集。
 
 时间复杂度
     T(n) = O(f(n))
-    O(l) < O(log2n) < O(n) < O(nlog2n) < O(n^2) < O(n^3) < O(2^n) < O(n!) < O(n^n)
+    O(l) < O(log2n) < O(n) < O(nlog2n) < O(n^2) < O(n^3) < O(2^n) < O(n!) <
+O(n^n)
 
 空间复杂度
     原地工作
 */
 
-void f(int n)
-{
-    int x = 1;
+void f(int n) {
+  int x = 1;
 
-    while(x < n)
-        x = 2*x;
+  while (x < n)
+    x = 2 * x;
 }
 /*
-    基本运算是语句 x = 2*x，设其执行时间为 T(n) ，则有 2^T(n) <= T(n)，即T(n) < log2n = O(log2n)。
+    基本运算是语句 x = 2*x，设其执行时间为 T(n) ，则有 2^T(n) <= T(n)，即T(n) <
+   log2n = O(log2n)。
 */
 
-void f(int n)
-{
-    int i = 0;
-    
-    while(i*i*i <= n)
-        i++;
+void f(int n) {
+  int i = 0;
+
+  while (i * i * i <= n)
+    i++;
 }
 /*
-    基本运算是语句 i++，设其执行时间为 T(n)，则有T(n)*T(n)*T(n) <= n，即T(n) <= n^(1/3) = O(n^(1/3))。
+    基本运算是语句 i++，设其执行时间为 T(n)，则有T(n)*T(n)*T(n) <= n，即T(n) <=
+   n^(1/3) = O(n^(1/3))。
 */
