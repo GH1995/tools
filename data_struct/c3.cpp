@@ -180,7 +180,7 @@ struct LinkQueue
 
 struct SeQueue
 {
-    ElemType data[MAXQSIZE];        // 队列元素的存储空间
+    int data[MAXQSIZE];        // 队列元素的存储空间
     int rear, front;                // 队头队尾指针
 };
 /*

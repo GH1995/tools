@@ -8,7 +8,7 @@
 
 struct Sqlist
 {
-    ElemType *elem;
+    int *elem;
     int length;
     int listsize;
 };
@@ -23,7 +23,7 @@ struct Sqlist
 
 typedef struct LNode
 {
-    ElemType data;                      // 数据data与指针next（背）
+    int data;                      // 数据data与指针next（背）
     struct LNode *next;
 }LNode, *LinkList;
 
@@ -79,7 +79,7 @@ int LengthList2(LinkList L)
 
 // 头插法
 
-void CreateListF(LinkList &L, ElemType a[], int n)  // 需要背下这个高大上的名字CreateListF（背）
+void CreateListF(LinkList &L, int a[], int n)  // 需要背下这个高大上的名字CreateListF（背）
 {
     LNode *s;                               // 该指针要作为注射器
     int i;
@@ -108,7 +108,7 @@ void CreateListF(LinkList &L, ElemType a[], int n)  // 需要背下这个高大�
 
 // 尾插法
 
-void CreateListR(LinkList &L, ElemType a[], int n)  // 需要背下这个高大上的名字CreateListR（背）
+void CreateListR(LinkList &L, int a[], int n)  // 需要背下这个高大上的名字CreateListR（背）
 {
     LNode *s, *r;
     int i;
@@ -170,7 +170,7 @@ LNode* GetList(LinkList L, int i)           // GetList名字要（背）
 
 
 // 按值查找
-LNode *LocateList(LinkList L, ElemType x)   // 名字LocateList要（背）
+LNode *LocateList(LinkList L, int x)   // 名字LocateList要（背）
 {
     LNode *p = L->next;
 
