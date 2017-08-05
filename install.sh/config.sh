@@ -24,7 +24,7 @@ conda config --set show_channel_urls yes
 
 # 安装深度学习的必要软件
 conda install tensorflow
-pip install keras autopep8 cheat mycli ici unidecode
+pip install keras autopep8 cheat mycli ici unidecode pillow
 
 # 配置 vimrc
 mkdir  ~/.vim
