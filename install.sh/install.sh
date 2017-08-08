@@ -14,7 +14,8 @@ sudo apt purge xul-ext-ubufox rhythmbox
 sudo apt purge libreoffice-core
 sudo apt purge libreoffice-*
 sudo apt purge unity-webapps-*
-sudo apt-get purge thunderbird*
+sudo apt-get purge thunderbird
+sudo apt purge aisleriot transmission-common
 
 # 收尾工作
 sudo apt upgrade
