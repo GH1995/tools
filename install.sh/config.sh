@@ -45,3 +45,8 @@ echo "finished installing"
 
 # 复制基础目录
 scp -rp 5102 guanhua@183.174.228.40:~/workspace ~/workspace
+
+# hexo
+# 解决转义问题
+npm uninstall hexo-renderer-marked --save
+npm install hexo-renderer-pandoc --save
