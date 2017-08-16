@@ -7,7 +7,7 @@ echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main rest
 sudo apt update
 
 # esstenial software, such as, zsh tmux
-sudo apt-get install build-essential cmake vim python-dev python3-dev zsh git tmux autojump emacs ctags g++ clang aria2 axel openssh-server openssh-client mysql-server mysql-client texlive-full fontforge latex-cjk-chinese
+sudo apt-get install build-essential cmake vim python-dev python3-dev zsh git tmux autojump emacs ctags g++ clang aria2 axel openssh-server openssh-client mysql-server mysql-client texlive-full fontforge latex-cjk-chinese pandoc
 
 # 卸载软件
 sudo apt purge xul-ext-ubufox rhythmbox
