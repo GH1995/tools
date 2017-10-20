@@ -6,7 +6,6 @@ read -p "Please input your email:" email
 git config --global user.name $name
 git config --global user.email $email
 git config --global push.default simple
-cd
 
 # 2			oh my zsh
 cd
@@ -35,7 +34,7 @@ wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-4.3.2
 bash Miniconda3-4.3.21-Linux-x86_64.sh # 需要输入
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --set show_channel_urls yes
-pip install tensorflow keras autopep8 cheat mycli ici unidecode pillow speedtest-cli
+pip install tensorflow keras autopep8 cheat mycli ici unidecode pillow speedtest-cli gistore
 
 # 6 		GCC
 cd
@@ -68,8 +67,6 @@ sudo apt update && \
 sudo apt upgrade && \
 conda update --all && \
 conda clean --all
-
-# FrRsaFh:
 
 # hexo
 # 解决转义问题
