@@ -1,8 +1,10 @@
 # 1 		install
 cd
-sudo apt install git zsh texlive-full build-essential cmake tmux autojump emacs ctags g++ aria2 axel pandoc lrzsz nload command-not-found htop npm nethogs clang iotop iftop build-essential software-properties-common cron-apt
-git config --global user.email tulingjiaoyu@gmail.com
-git config --global user.name GuanHua
+sudo apt install git zsh texlive-full build-essential cmake tmux autojump emacs ctags g++ aria2 axel pandoc lrzsz nload command-not-found htop npm nethogs clang iotop iftop build-essential software-properties-common cron-apt dot2tex rinetd
+read -p "Please input your git name:" name
+read -p "Please input your email:" email
+git config --global user.name $name
+git config --global user.email $email
 git config --global push.default simple
 cd
 
